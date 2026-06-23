@@ -730,6 +730,8 @@ do
 
     stylua = {}, -- Used to format Lua code
 
+    biome = {},
+
     -- Special Lua Config, as recommended by neovim help docs
     lua_ls = {
       on_init = function(client)
@@ -785,6 +787,9 @@ do
   local ensure_installed = vim.tbl_keys(servers or {})
   vim.list_extend(ensure_installed, {
     -- You can add other tools here that you want Mason to install
+    'biome',
+    'rust-analyzer',
+    'typescript-language-server',
   })
 
   require('mason-tool-installer').setup { ensure_installed = ensure_installed }
