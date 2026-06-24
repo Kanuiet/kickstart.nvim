@@ -181,7 +181,7 @@ do
   -- [[ Basic Keymaps ]]
   --  See `:help vim.keymap.set()`
 
-  vim.keymap.set("n", "<C-w>", function()
+  vim.keymap.set("n", "<C-s>", function()
     local name = vim.api.nvim_buf_get_name(0)
   
     if name == "" then
@@ -197,7 +197,7 @@ do
 
   vim.keymap.set('n', '<C-t>', '<cmd>enew<CR>')
 
-  vim.keymap.set('n', '<C-s>', '<cmd>write<CR>')
+  vim.keymap.set('n', '<leader>x', '<cmd>bd<CR>')
 
   vim.keymap.set('n', '<Tab>', '<cmd>bnext<CR>')
   vim.keymap.set('n', '<S-Tab>', '<cmd>bprevious<CR>')
